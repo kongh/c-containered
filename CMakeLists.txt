@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.28)
+project(untitled C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(untitled main.c
+        chroot.c
+        chroot.h
+        execv.c
+        execv.h
+        sss.c)
