@@ -1,9 +1,10 @@
 #include "chroot.h"
 #include "execv.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
     printcwd("Running in the directory");
     // return main_chroot();
-    return main_execv();
+    // return main_execv();
+    clone_namespace_uts(argc, argv);
 }
