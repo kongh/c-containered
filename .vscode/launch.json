@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "C++ Main",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/main", // 替换为你的可执行文件路径
+        "args": ["thisisnodename"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        // "miDebuggerPath": "/usr/bin/gdb", // 确保这是 gdb 的正确路径
+        "miDebuggerPath": "${workspaceFolder}/sudo_gdb.sh", // 确保这是 gdb 的正确路径
+        "setupCommands": [
+            {
+              "text": "-enable-pretty-printing",
+              "description": "enable pretty printing",
+              "ignoreFailures": true
+            }
+          ],
+        "preLaunchTask": "CMake Build", // 假设你有一个名为 "CMake Build" 的构建任务
+        //"postDebugTask": "CMake Clean", // 可选，调试后清理
+      }
+    ]
+  }

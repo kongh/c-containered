@@ -31,6 +31,8 @@ int main_chroot(void)
         perror("privileged failed");
         exit(EXIT_FAILURE);
     }
+    printf("Run user:%d\n", getuid());
+
 
     // change root
     // Only a privileged process (Linux: one with the CAP_SYS_CHROOT capability) may call chroot()
